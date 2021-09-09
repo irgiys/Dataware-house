@@ -404,6 +404,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+   html,
+   body {
+      overflow-x: hidden;
+   }
    .for-nav.push {
       transform: translateX(-200px);
       transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -414,13 +418,16 @@ footer {
    }
    .burger-btn {
       display: flex;
+      position: fixed;
+      right: 30px;
    }
    nav .navigation {
       padding-left: 30px;
-      position: absolute;
+      position: fixed;
       flex-direction: column;
       width: 400px;
       top: -20px;
+      bottom: -20px;
       font-size: 1.6em;
       background: white;
       box-shadow: 0 2px 2px var(--grey);
